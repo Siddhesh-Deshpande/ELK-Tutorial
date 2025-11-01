@@ -1,0 +1,10 @@
+services:
+  api-service:
+    image: rohitshah1706/spe_api_service:latest
+    container_name: api-service
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./api-service/.env
+    volumes:
+      - ./logs:/logs
