@@ -4,7 +4,7 @@ services:
     container_name: api-service
     ports:
       - "3000:3000"
-    env_file:
-      - ./api-service/.env
+    environment:
+      LOGS_PATH: "/logs"
     volumes:
       - ./logs:/logs
